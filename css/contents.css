@@ -1,0 +1,704 @@
+@charset "utf-8";
+
+/* contents.css */
+/***  인트로  ***/
+.introWrap {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 2.4rem 3.6rem;
+  background: #0880FF url("/images/contents/img_gate_vi.svg") 88% 0 no-repeat;
+}
+.introWrap .logoArea {
+  position: relative;
+  text-align: left;
+  padding: 30rem 2.4rem 0;
+}
+.introWrap .logoArea .logo {
+  width: 5.6rem;
+  height: 5.6rem;
+  background: url("/images/contents/logo_gate.svg") no-repeat;
+  background-size: 5.6rem auto;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.introWrap .logoArea p.txt {
+  margin-top: 2.4rem;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.introWrap .inputForm {
+  margin-top: 3rem;
+}
+.introWrap .inputForm .loginbtn{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  padding: 1.5rem 2rem 1.4rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.introWrap .inputForm .loginbtn img{
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.8rem;
+}
+.introWrap .inputForm .kakao {
+  color: #000;
+  background-color: #FFD33A;
+}
+.introWrap .inputForm .naver {
+  color: #fff;
+  background-color: #21D921;
+}
+.introWrap .inputForm .idpw {
+  color: #fff;
+  border: 1px solid #4EA4FF;
+}
+
+/***  로그인  ***/
+.loginWrap {
+  width: 100%;
+  margin: 0;
+}
+.loginWrap .logoArea {
+  position: relative;
+  margin-top: 4.8rem;
+  text-align: center;
+}
+.loginWrap .logoArea .logo {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: url("/images/common/Ico_applogo.svg") no-repeat;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+/* 로그인 input */
+.loginWrap .loginForm {
+  position: relative;
+  margin-top: 2.4rem;
+}
+.loginWrap .loginForm .inptWrap {
+  position: relative;
+  margin-bottom: 1.6rem;
+  padding: 0.2rem 2rem;
+  border-radius: 3rem;
+  border: 1px solid #ddd;
+}
+.loginWrap .loginForm .inptWrap:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2rem;
+  height: 1.8rem;
+  background: url("/images/common/ico_user.svg") left center no-repeat;
+  background-size: 2rem auto;
+  z-index: 1;
+  transform: translate(0, -50%);
+}
+.loginWrap .loginForm .inptWrap.id::before {
+  background: url("/images/common/ico_user.svg") left center no-repeat;
+}
+.loginWrap .loginForm .inptWrap.pw::before {
+  background: url("/images/common/ico_pw.svg") left center no-repeat;
+}
+.loginWrap .loginForm .inptWrap input {
+  display: block;
+  width: 100%;
+  padding: 0 0 0 3.6rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border:0 none;
+  background-color: transparent;
+  border-radius: 3rem;
+  word-break: keep-all;
+  white-space: nowrap;
+  color: #000;
+}
+.loginWrap .loginForm .inptWrap.on,
+.loginWrap .loginForm .inptWrap.active {
+  border-color: #0880FF;
+}
+.loginWrap .loginForm .inptWrap.error {
+  border-color: #FF0000;
+}
+.loginForm p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.loginForm .errorMsg {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem 0.9rem;
+  background-color: #FFEBEB;
+  border-radius: 2rem;
+}
+.loginForm .errorMsg p {
+  padding-left: 2.6rem;
+  font-size: 1.4rem;
+  background: url("/images/common/ico_input_error.svg") left center no-repeat;
+}
+
+/* 아이디,비번 찾기 */
+.loginWrap .infoTxt {
+  margin-top: 40px;
+}
+.loginWrap .infoTxt ul {
+  display: block;
+}
+.loginWrap .infoTxt ul li {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+.loginWrap .infoTxt ul li a {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+  padding-right: 1.4rem;
+  color: #0880FF;
+  font-weight: 500;
+ }
+.loginWrap .infoTxt ul li a::after {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 1.6rem;
+  position: absolute;
+  right: 0;
+  top:1px;
+  background: url("/images/common/ico_arr_md_r.svg") center center no-repeat;
+ }
+
+ /* 회원가입 */
+.JoinWrap {
+  margin-top: 2.4rem;
+}
+.JoinWrap .stepArea {
+  margin-bottom: 1.6rem;
+}
+.JoinWrap .stepArea ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.JoinWrap .stepArea ul li {
+  margin-right: 0.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #ddd;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.6rem;
+}
+.JoinWrap .stepArea ul li.on {
+  background-color: #0880FF;
+}
+.JoinWrap .textWrap p {
+  margin-bottom: 1.6rem;
+}
+.JoinWrap .textWrap p.title {
+  font-size: 2.8rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.JoinWrap .textWrap p.subtit {
+  font-size: 1.6rem;
+  color: #666666;
+  line-height: 1.8;
+}
+.JoinWrap .textWrap p.subtit em {
+  color: #0880FF;
+  font-weight: 500;
+}
+.JoinWrap .imgArea {
+  margin: 8rem 0;
+  text-align: center;
+}
+
+/* 팝업 */
+.popInner .popCont .confirmMsg .title {
+  margin-bottom: 0.8rem;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.popInner .popCont .confirmMsg .disc {
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* Tip message */
+.formHolder .msgTip {
+  margin-top: 0.8rem;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.formHolder .msgHelp {
+  margin-top: 0.8rem;
+  color: #0880FF;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.formHolder .msgError {
+  margin-top: 0.8rem;
+  color: #FF0000;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
+}
+.formHolder .inputList input.error {
+  border-color: #FF0000;
+}
+
+/* main */
+.container.main {
+  min-height: 100vh;
+  background-color: #0880FF;
+}
+.mainIntroWrap {
+  margin-bottom: 2.4rem;
+  background: url("/images/contents/img_main_vi.svg") right 1rem bottom no-repeat;
+}
+.mainIntroWrap .logoArea {
+  position: relative;
+  text-align: left;
+  padding: 0;
+}
+.mainIntroWrap .logoArea .logo {
+  margin-bottom: 2.4rem;
+  width: 5.6rem;
+  height: 5.6rem;
+  background: url("/images/contents/logo_gate.svg") no-repeat;
+  background-size: 5.6rem auto;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.mainIntroWrap .logoArea p.txt {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.mainIntroWrap .logoArea p.txt.regular {
+  font-weight: 400;
+}
+.barcodeArea {
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+.barcodeArea .titleWrap {
+  text-align: center;
+  /*margin-bottom: 3rem;*/
+  margin-bottom: 1rem;
+}
+.barcodeArea .titleWrap p.name {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.barcodeArea .titleWrap p.name em {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.barcodeArea .titleWrap p.point {
+  color: #2B45F2;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.2rem;
+}
+.barcodeArea .titleWrap p.point em {
+  font-size: 3.6rem;
+}
+.barcodeArea .codeWrap {
+  max-width: 100%;
+  height: 100px;
+  /*height: 120px; IF QR*/
+  overflow: hidden;
+  text-align: center;
+}
+.container.main .btnWrap .slidePop {
+  position: relative;
+  display: block;
+	width: 100%;
+	height: 4.8rem;
+	line-height: 4.6rem;
+	border-radius: 3rem;
+  border: 1px solid #fff;
+	padding: 0 3.4rem 0 2.4rem;
+  color: #fff;
+	font-weight: 500;
+  background:transparent url("/images/common/ico_arr_down_white.svg") right 10px center no-repeat;
+  background-size: 4rem 4rem;
+  text-align: left;
+}
+.container.main2 .logoArea {
+  position: relative;
+  margin: 4.8rem 0 3.2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.container.main2 .logoArea .logo {
+  width: 5.6rem;
+  height: 5.6rem;
+  background: url("/images/common/Ico_applogo2.svg") center center no-repeat;
+  background-size: 5.6rem auto;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.container.main2 .barcodeArea{
+  padding: 0 4rem;
+}
+
+/* popup slide list */
+.poplistWrap li {
+  display: block;
+}
+.poplistWrap li a {
+  display: block;
+  padding: 1.3rem 2rem;
+  color: #666666;
+  font-weight: 400;
+}
+.poplistWrap li a:hover,
+.poplistWrap li a.on,
+.poplistWrap li a.active {
+  color: #000;
+  font-weight: 700;
+  background-color: #f9f9f9;
+}
+
+/* my page */
+.myWrap {
+  margin-top: 2.4rem;
+}
+.myWrap .barcodeArea {
+  margin: 3.2rem 0;
+  padding: 2rem 2.4rem;
+  background-color: #F9F9F9;
+  border-radius: 2rem;
+}
+.myWrap .barcodeArea .titleWrap {
+  margin-bottom: 0;
+}
+.myWrap .checkLine {
+  display: block;
+  margin-right:0;
+  margin-bottom: 1.6rem;
+  letter-spacing: -1px;
+}
+.myWrap .checkLine input[type="radio"]+label, .myWrap .checkLine input[type="checkbox"]+label {
+  vertical-align: top;
+}
+.myWrap .msgWrap {
+  margin: 3.2rem 0;
+  text-align: center;
+}
+.myWrap .msgWrap .tit {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.myWrap .msgWrap .disc {
+  margin-bottom: 1.6rem;
+  color: #666666;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.myWrap .infoWrap {
+  margin: 3.2rem 0;
+  background: url("/images/contents/img_my_logo.svg") left center no-repeat;
+}
+.myWrap .infoWrap .titleWrap {
+  text-align: left;
+  margin-bottom: 3.2rem;
+  padding-left: 8rem;
+}
+.myWrap .infoWrap .titleWrap p.name {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+.myWrap .infoWrap .titleWrap p.name em {
+  font-weight: 400;
+}
+.myWrap .infoWrap .titleWrap p.point {
+  color: #2B45F2;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.2rem;
+}
+.myWrap .appInfo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  padding: 2rem;
+  background-color: #F9F9F9;
+}
+.myWrap .appInfo .tit {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.myWrap .appInfo .num {
+  color: #0880FF;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.myWrap .menuList li {
+  display: block;
+  padding: 2.3rem 4rem 2.2rem 1.6rem ;
+  border-bottom: 1px solid #eee;
+  background: url("/images/common/ico_arr_mdB_r.svg") right center no-repeat;
+  background-size: 4rem auto;
+}
+.myWrap .menuList li:last-child {
+  border-bottom: none;
+  background-image: none;
+}
+.myWrap .menuList li a {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.myWrap .bannerArea {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 2.4rem 0 3.2rem;
+}
+.myWrap .bannerArea .titleWrap {
+  width: 50%;
+  padding: 1.6rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 1.6rem;
+}
+.myWrap .bannerArea .titleWrap  + .titleWrap {
+  margin-left: 0.6rem;
+}
+.myWrap .bannerArea .titleWrap p.name {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.myWrap .bannerArea .titleWrap p.point {
+  color: #2B45F2;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+}
+/* listBox */
+.listBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+}
+.listBox.detail {
+  background-color: #F9F9F9;
+}
+.listBox .tit {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.listBox .txt {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.listBox .point {
+  max-width: 50%;
+  color: #2B45F2;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+  word-break: keep-all;
+}
+.listBox dl {
+  display: flex;
+}
+.listBox dl dt {
+  margin-right: 6px;
+  color: #666666;
+}
+.listBox dl dd {
+  color: #000;
+}
+.detailListBox {
+  padding: 0 2rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+}
+.detailListBox ul li {
+  padding: 2rem 0 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+.detailListBox ul li:last-child {
+  border-bottom: none;
+}
+.detailListBox dl dt {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.detailListBox dl dd {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* map */
+.mapArea {
+  position: relative;
+  max-height: 32rem;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.mapArea .img {
+  max-width: 100%;
+}
+.mapArea .pin {
+  position: absolute;
+}
+.txtTip {
+  margin: 1.6rem 0;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #000;
+}
+/* starList */
+.starList ul li a {
+  display: block;
+  padding: 1.6rem 1.6rem 1.6rem 5.4rem;
+  background: url("/images/contents/ico_star.svg") left 1.6rem center no-repeat;
+}
+.starList ul li a:hover,
+.starList ul li a.on {
+  color: 000;
+  font-weight: 500;
+  background-color: #F9F9F9;
+}
+/* admin dashboard */
+.dashWrap {
+  margin: 3.6rem 0 0;
+}
+.dashWrap .title {
+  margin-bottom: 1.6rem;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.dashWrap .graphWrap {
+  padding: 2rem;
+  border-radius: 1.6rem;
+  background-color: #F9F9F9;
+}
+.contBox {
+  margin-bottom: 3.6rem;
+}
+.contBox:last-child {
+  margin-bottom: 0;
+}
+.contBox:last-child li:last-child {
+  margin-bottom: 0;
+}
+/* rateList */
+.rateList {}
+.rateList .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.rateList .badge.color1 {
+	border-color: #00D689;
+	background-color: #00D689;
+}
+.rateList .badge.color2 {
+	border-color: #00D689;
+	background-color: #00D689;
+}
+.rateList .badge.color3 {
+	color: #000;
+	border-color: #FFE381;
+	background-color: #FFE381;
+}
+.rateList .badge.color4 {
+  color: #000;
+	border-color: #FFE381;
+	background-color: #FFE381;
+}
+.rateList .badge.color5 {
+	border-color: #FF6666;
+	background-color: #FF6666;
+}
+.rateList ul li {
+  margin-bottom: 2.4rem;
+}
+.rateList ul li p {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.rateList ul.ratingBar li {
+  margin-bottom: 0rem;
+}
+
+
+
+/* media query */
+/* 갤럭시 폴드 */
+@media screen and (max-width: 319px) {
+  .loginWrap .infoTxt ul li a {
+    margin-left: 0.5rem;
+  }
+  .myWrap .bannerArea {
+    flex-wrap:wrap;
+  }
+  .myWrap .bannerArea .titleWrap {
+    width: 100%;
+  }
+  .myWrap .bannerArea .titleWrap + .titleWrap {
+    margin-left: 0;
+    margin-top: 1.6rem;
+  }
+  .popCont .btn, .inputList .btn {
+    padding: 1.4rem 1rem 1.3rem;
+  }
+  .popWrap.centerLayer .popInner .popCont{
+    padding: 4rem 1.4rem 2.4rem;
+  }
+  .popCont .btnWrap.half .btn + .btn {
+    margin-left: 0.2rem;
+  }
+}

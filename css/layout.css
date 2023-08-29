@@ -1,0 +1,453 @@
+@charset "utf-8";
+
+/* layout.css */
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.8rem;
+  text-align: center;
+  z-index: 1100;
+  background-color: #fff;
+}
+.header h1 {
+  display: block;
+  width: 100%;
+  padding: 0 5.4rem;
+  line-height: 130%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000000;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  overflow: hidden;
+  letter-spacing: -0.05rem;
+}
+.header h1 a {
+  font-size: inherit;
+  font-family: "NanumSquareRound" !important;
+  display: block;
+  height: 4.8rem;
+  letter-spacing: -0.05rem;
+  line-height: 4.8rem;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.header .btnBack,
+.header .btnNav {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 4rem;
+  text-indent: -9999rem;
+}
+.header .btnBack:before,
+.header .btnNav:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 1.4rem;
+  left: 1rem;
+  background-size: auto 2rem;
+}
+.header .btnBack:before {
+  background: url("/images/common/ico_header_back.svg");
+}
+.header .btnNav:before {
+  background: url("/images/common/ico_header_menu.svg");
+}
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1100;
+  left: 0;
+  text-align: center;
+}
+.footerNav, .footerNav li, .footerNav li a {
+  box-sizing:border-box;
+}
+.footerNav {
+  display: flex;
+  position:relative;
+  width:100%;
+  height:5.8rem;
+  background:#fff;
+  z-index:10;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+}
+.footerNav li {
+  position:relative;
+  width:33.333%;
+  height:100%;
+  padding-top:0.2rem;
+  font-size:1.2rem;
+  color:#666;
+  text-align:center;
+}
+.footerNav li a,
+.footerNav li a:active,
+.footerNav li a:link,
+.footerNav li a:visited {
+  display:block;
+  position:relative;
+  padding-top:3.4rem;
+  color:#666;
+}
+.footerNav li a.on {
+  color:#000;
+}
+.footerNav li a:before,
+.footerNav li a>i:before,
+.footerNav li a>i:after {
+  display:block;
+  content:'';
+  position:absolute;
+  width:2.4rem;
+  height:2.4rem;
+  top:0.5rem;
+  left:50%;
+  margin-left:-1.2rem;
+  background-size:2.4rem 2.4rem;
+  background-repeat:no-repeat;
+}
+.footerNav li a>i {
+  display:block;
+  position:absolute;
+  width:2.4rem;
+  height:2.4rem;
+  top:0.5rem;
+  left:50%;
+  margin-left:-1.2rem;
+}
+.footerNav li a.item01:before{
+  background-image:url("/images/common/ico_gnb_home.svg")
+}
+.footerNav li a.item01.on:before{
+  background-image:url("/images/common/ico_gnb_home_o.svg")
+}
+.footerNav li a.item02:before{
+  background-image:url("/images/common/ico_gnb_help.svg")
+}
+.footerNav li a.item02.on:before{
+  background-image:url("/images/common/ico_gnb_help_o.svg")
+}
+.footerNav li a.item03:before{
+  background-image:url("/images/common/ico_gnb_my.svg")
+}
+.footerNav li a.item03.on:before{
+  background-image:url("/images/common/ico_gnb_my_o.svg")
+}
+
+/* container */
+.container {
+  max-height: 100%;
+  padding: 4.8rem 2.4rem 8rem;
+}
+.container.nopd {
+  padding: 4.8rem 0 0;
+}
+
+/* formHolder */
+.formHolder {
+	margin-top: 3.2rem;
+}
+.formHolder .tit,
+.formHolder label.tit,
+.formHolder strong.tit {
+  position: relative;
+	margin-top: 0.8rem;
+	display: block;
+	margin: 3.2rem 0 0.8rem;
+	font-size: 1.6rem;
+	color: #000;
+}
+.formHolder .tit .required {
+  position: absolute;
+  top: 1px;
+  height: 2rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+  color: #ec373c;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  line-height: 3rem;
+}
+.formHolder .inputList {
+  position: relative;
+}
+/* input + btn */
+.formHolder .inputList.add {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.formHolder .inputList.add .btn {
+  margin-left: 0.4rem;
+}
+.formHolder .inputList.vertical input + input {
+  margin-top: 0.8rem;
+}
+.formHolder .inputList + .inputList {
+  margin-top: 0.8rem;
+}
+/* 이메일 input form */
+.formHolder .inputList.inputWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 3rem;
+}
+.formHolder .inputList.inputWrap input {
+  border: 0 none;
+  border-radius:0;
+  background-color: transparent;
+}
+.formHolder .inputList.inputWrap select.select {
+  border: 0 none;
+  border-radius:0;
+  background-color: transparent;
+}
+/* 약관 */
+.formHolder .termsArea {
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+	width: 100%;
+	max-height: 140px;
+  padding: 1.6rem 2.4rem;
+	box-sizing: border-box;
+	border-radius: 2.4rem;
+	border: 1px solid #ddd;
+	line-height: 130%;
+	white-space: normal;
+	font-size: 1.6rem;
+}
+.formHolder .termsArea h1,
+.formHolder .termsArea p {
+  line-height: 130%;
+}
+.formHolder .termsArea h1 {
+  margin-bottom: 5px;
+}
+/* popup */
+.popWrap {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1101;
+}
+.popWrap .popInner {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1202;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+}
+
+.popInner .popCont {
+  background: #fff;
+  color: #000;
+  z-index: 1202;
+  /*overflow-y: scroll;*/
+  overflow-y: none;
+  -webkit-overflow-scrolling: touch;
+}
+.popWrap .popInner .popHeader {
+  position: relative;
+  text-align: center;
+}
+.popWrap .popInner2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1202;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+}
+.popInner2 .popCont {
+  background: #fff;
+  color: #000;
+  z-index: 1202;
+  /*overflow-y: scroll;*/
+  overflow-y: none;
+  -webkit-overflow-scrolling: touch;
+}
+.popWrap .popInner2 .popHeader {
+  position: relative;
+  text-align: center;
+}
+.popBtnWrap {
+  display: table;
+  width: 100%;
+  height: 3.5rem;
+  background-color: #fff;
+  text-align: right;
+}
+.popBtnWrap .popBtn {
+  display: block;
+  padding: 0 1.7rem 1.5rem 1.7rem;
+}
+.popBtnWrap .popBtn > a,
+.popBtnWrap .popBtn > a:hover,
+.popBtnWrap .popBtn > a:active,
+.popBtnWrap .popBtn > a:link {
+  display: inline-block;
+  width: auto;
+  padding: 0 0.5rem 0 1.5rem;
+  vertical-align: middle;
+  color: #222;
+  text-align: center;
+  font-size: 1.6rem !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.popWrap .popClose,
+.popBtnWrap .popClose {
+  position: absolute;
+  top: 1.4rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background: url("/images/common/ico_header_close.svg") right center no-repeat;
+  text-indent: -999rem;
+}
+.popWrap.fullLayerPop {
+  overflow: hidden;
+}
+.popWrap.fullLayerPop .popInner {
+  position: absolute;
+  height: 100%;
+  bottom: auto;
+  top: 0;
+}
+.popWrap.fullLayerPop .popInner h1 {
+  display: block;
+  width: 100%;
+  padding: 0 5.4rem;
+  line-height: 130%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000000;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  overflow: hidden;
+  letter-spacing: -0.05rem;
+  background-color: #fff;
+  text-align: center;
+}
+.popWrap.fullLayerPop .popInner .popCont {
+  padding: 0 1.7rem 4rem;
+  overflow-y: auto;
+}
+.popWrap.centerLayer .popInner {
+  left: 15px;
+  right: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  width: auto;
+  bottom: auto;
+}
+.popWrap.centerLayer .popInner .popCont {
+  padding: 4rem 2.4rem 2.4rem;
+  text-align: center;
+}
+.popWrap.centerLayer .popInner2 {
+  left: 15px;
+  right: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  width: auto;
+  bottom: auto;
+}
+.popWrap.centerLayer .popInner2 .popCont {
+  padding: 4rem 2.4rem 2.4rem;
+  text-align: center;
+}
+.popWrap.centerLayer  .popClose {
+  top: 1.4rem;
+  right: 1.4rem;
+}
+.popWrap.slidePopOption {
+
+}
+.popWrap.slidePopOption .popHeader {
+  background-color: #fff;
+}
+.popWrap.slidePopOption .popHeader h2 {
+  padding: 1.7rem;
+}
+.popWrap.slidePopOption .popHeader .popClose {
+  top: 1.7rem;
+}
+.dim {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.dimCloseArea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 1199;
+}
+/* 스크롤 막기 CSS */
+.notScroll {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  touch-action: none;
+}
+/* pagination */
+.pagination {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.pagination li a {
+  margin-left: -0.1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 4rem;
+  height: 4rem;
+  border: 1px solid #ddd;
+  word-break: keep-all;
+}
+.pagination li a:hover,
+.pagination li a.on {
+  color: #fff;
+  background-color: #0880FF;
+  border: 1px solid #0880FF;
+}
+

@@ -1,0 +1,372 @@
+@charset "utf-8";
+html {
+  position: relative;
+  height: 100%;
+  display: block;
+  font-size: 62.5%; /* 62.5% of the base size of 16px = 10px.*/
+}
+html, body {
+  font-family: "NanumSquareRound", "맑은 고딕", "돋움", dotum, sans-serif;
+  color: #000;
+  font-weight: normal;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /* -webkit-user-select: none; */
+  -webkit-text-size-adjust: none;
+  word-break: break-all;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+span,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+input,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+fieldset,
+iframe {
+  border: 0;
+}
+
+body,
+div,
+dl,
+dd,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+button,
+p,
+pre,
+blockquote,
+menu,
+figure,
+input,
+select,
+table,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption {
+  display: block;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+legend,
+select,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu,
+button,
+a,
+span,
+strong,
+label,
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+figure,
+figcaption {
+  word-break: break-word;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+/* 여백을 포함한 사이즈 설정*/
+body {
+  font-size: 1.6rem; /* reset 10*1.6 = 16px, to make sure you do not get any 10px around */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea,
+button,
+option {
+  color: inherit;
+  font-family: "NanumSquareRound", "맑은 고딕", "돋움", dotum, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+pre,
+code,
+samp,
+kbd {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+th {
+  font-weight: 700;
+}
+
+em,
+var,
+address {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+legend,
+fieldset,
+button,
+img {
+  border: 0 none;
+}
+
+input,
+select,
+textarea,
+button,
+label,
+strong,
+a,
+time {
+  vertical-align: inherit;
+}
+
+input,
+select,
+textarea,
+button,
+option {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* 화살표 없애기 공통*/
+}
+
+input[type="text"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* 화살표 없애기 공통*/
+}
+
+button,
+select,
+option {
+  color: inherit;
+  text-transform: none;
+}
+
+select {
+  border-radius: 0.6rem;
+  padding: 0 0 0 1.5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+caption,
+legend {
+  text-indent: -500rem;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  overflow: visible;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* color:#777 */
+a:hover {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: 1px solid #222;
+}
+
+*:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-focus-ring-color: transparent !important;
+  outline: none;
+}
