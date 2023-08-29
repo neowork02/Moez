@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200" />
+    <meta name="theme-color" content="#00adef" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Publishing List</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Malgun Gothic", "맑은 고딕", Apple Gothic, arial,
+          helvetica, sans-serif;
+        font-weight: 400;
+      }
+      body {
+        min-width: 980px;
+        padding: 0 20px 50px 20px;
+        font-size: 12px;
+      }
+      a {
+        color: #444;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #444;
+      }
+      a:visited,
+      a:focus,
+      a:active {
+        color: #444;
+      }
+      h1 {
+        font-size: 30px;
+        margin: 20px 0 10px 0;
+        letter-spacing: -1px;
+        font-weight: 600;
+      }
+      h1 img {
+        height: 40px;
+        margin: 2px 5px 0 0;
+        vertical-align: top;
+      }
+      .info {
+        position: absolute;
+        right: 25px;
+        top: 40px;
+      }
+      .guide {
+        margin: 10px 0 5px 0;
+        text-align: right;
+      }
+      h2 {
+        padding: 10px 0 10px 15px;
+        font-size: 13px;
+        border-bottom: none;
+        background: #2B45F2;
+        color: #fff;
+        font-weight: 500;
+      }
+      caption {
+        display: none;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        border-spacing: 0;
+      }
+
+      table thead th {
+        padding: 7px 3px;
+        border: 1px solid #ccc;
+        background: #eee;
+        font-size: 13px;
+      }
+      table tbody td {
+        padding: 7px 3px;
+        background: #e4e4e4;
+        border: 1px solid #ccc;
+        text-align: center;
+        color: #898989;
+        font-size: 11px; /*display:none;*/
+      }
+      table tbody td.left {
+        padding: 7px 10px;
+        text-align: left;
+      }
+      table tbody td.url {
+        padding: 7px 10px;
+        text-align: left;
+      }
+      table tbody tr.hidden td {
+        display: table-cell;
+        background: #e4e4e4;
+        color: #898989;
+        text-decoration: line-through;
+      }
+      table tbody tr.temp td {
+        display: table-cell;
+        background: #fdf0dc;
+        color: #444;
+      }
+      table tbody tr.ing td {
+        display: table-cell;
+        background: #d9eafd;
+        opacity: 0.3;
+      }
+      table tbody tr.ed td {
+        display: table-cell;
+        background: #fff;
+      }
+      table tbody tr.ed:hover td {
+        background: #dcf2f9;
+      }
+      .tab {
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .tab div {
+        float: right;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .tab a {
+        position: relative;
+        float: left;
+        min-width: 100px;
+        padding: 10px;
+        background: #eee;
+        border-right: solid 1px #fff;
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .tab a:last-child {
+        border: none;
+      }
+      .tab a:hover {
+        background: #ccc;
+      }
+      .tab a.on {
+        background: #009fe3;
+        color: #fff;
+      }
+      .tab a.on:hover {
+        background: #0086bf;
+      }
+      .proc_wrap {
+        margin: 30px 0 -35px 0;
+      }
+      .proc_wrap strong {
+        color: #009fe3;
+        font-weight: bold;
+      }
+      .red {
+        color: #e80000 !important;
+      }
+      .ico {
+        display: inline-block;
+        height: 20px;
+        margin-left: 5px;
+        padding: 0 5px;
+        border-radius: 2px;
+        font-style: normal;
+        font-size: 11px;
+        color: #fff;
+        line-height: 20px;
+      }
+      .ico.add {
+        background: #019ee3;
+      }
+      .ico.modify {
+        background: #e30101;
+      }
+      .ico.ing {
+        background: #53b100;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>[Mo-EZ] APP Publishing List</h1>
+    <p class="info">2023.05.18 Last update</p>
+    <p class="guide"></p>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- 샘플 -->
+      <h2>샘플</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-100-0</td>
+              <td>input 샘플</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-100-0.html" target="_blank">./html/moez-100-0.html</a>
+              </td>
+              <td>2023.05.10</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //샘플 -->
+      <!-- 로그인 -->
+      <h2>01 로그인</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-001-0</td>
+              <td>게이트</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-001-0.html" target="_blank">./html/moez-001-0.html</a>
+              </td>
+              <td>2023.05.10</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-001-1</td>
+              <td>로그인</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-001-1.html" target="_blank">./html/moez-001-1.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-001-2</td>
+              <td>아이디 찾기</td>
+              <td>전체팝업</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-001-2.html" target="_blank">./html/moez-001-2.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-001-3</td>
+              <td>비밀번호 찾기</td>
+              <td>전체팝업</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-001-3.html" target="_blank">./html/moez-001-3.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //로그인 -->
+
+      <!-- 회원가입 -->
+      <h2>02 회원가입</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-002-1</td>
+              <td>휴대폰 본인인증</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-002-1.html" target="_blank">./html/moez-002-1.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-002-2</td>
+              <td>휴대폰 본인인증</td>
+              <td>인증완료</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-002-2.html" target="_blank">./html/moez-002-2.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-002-3</td>
+              <td>휴대폰 본인인증</td>
+              <td>팝업창</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-002-3.html" target="_blank">./html/moez-002-3.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-002-4-1</td>
+              <td>회원가입</td>
+              <td>정보입력</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-002-4-1.html" target="_blank">./html/moez-002-4-1.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-002-4-2</td>
+              <td>회원가입</td>
+              <td>정보입력</td>
+              <td>상태값</td>
+              <td class="url">
+                <a href="./html/moez-002-4-2.html" target="_blank">./html/moez-002-4-2.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-002-5</td>
+              <td>회원가입</td>
+              <td>가입완료</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-002-5.html" target="_blank">./html/moez-002-5.html</a>
+              </td>
+              <td>2023.05.15</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //회원가입 -->
+      <!-- 메인 -->
+      <h2>03 메인</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-003-1</td>
+              <td>메인</td>
+              <td>불특정다수</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-003-1.html" target="_blank">./html/moez-003-1.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-003-2</td>
+              <td>메인</td>
+              <td>즐겨찾기 팝업</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-003-2.html" target="_blank">./html/moez-003-2.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-003-3</td>
+              <td>메인</td>
+              <td>바코드</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-003-3.html" target="_blank">./html/moez-003-3.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //메인 -->
+      <!-- 문의 -->
+      <h2>04 문의</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-004-1</td>
+              <td>문의</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-004-1.html" target="_blank">./html/moez-004-1.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //문의-->
+      <!-- 마이페이지 -->
+      <h2>05 마이페이지</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-005-1</td>
+              <td>마이페이지</td>
+              <td></td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-1.html" target="_blank">./html/moez-005-1.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-2</td>
+              <td>마이페이지</td>
+              <td>팝업</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-2.html" target="_blank">./html/moez-005-2.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-3</td>
+              <td>마이페이지</td>
+              <td>자주 찾는 모이지</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-3.html" target="_blank">./html/moez-005-3.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-4</td>
+              <td>마이페이지</td>
+              <td>자주 찾는 모이지</td>
+              <td>팝업</td>
+              <td class="url">
+                <a href="./html/moez-005-4.html" target="_blank">./html/moez-005-4.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-5</td>
+              <td>마이페이지</td>
+              <td>개인정보수정</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-5.html" target="_blank">./html/moez-005-5.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-6</td>
+              <td>마이페이지</td>
+              <td>모이지신청및불편신고</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-6.html" target="_blank">./html/moez-005-6.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-8</td>
+              <td>마이페이지</td>
+              <td>모이지 포인트 확인</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-8.html" target="_blank">./html/moez-005-8.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-005-7</td>
+              <td>마이페이지</td>
+              <td>회원탈퇴</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-005-7.html" target="_blank">./html/moez-005-7.html</a>
+              </td>
+              <td>2023.05.16</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //마이페이지 -->
+      <!-- 관리자 -->
+      <h2>06 관리자</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 30%" />
+            <col span="1" style="width: 10%" />
+            <col span="1" style="width: 20%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Screen ID</th>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">Etc.</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ed">
+              <td>moez-006-1</td>
+              <td>관리자</td>
+              <td>메인</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-006-1.html" target="_blank">./html/moez-006-1.html</a>
+              </td>
+              <td>2023.05.17</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-006-2</td>
+              <td>관리자</td>
+              <td>상태</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-006-2.html" target="_blank">./html/moez-006-2.html</a>
+              </td>
+              <td>2023.05.17</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-006-3</td>
+              <td>관리자</td>
+              <td>표인트 사용현황</td>
+              <td></td>
+              <td class="url">
+                <a href="./html/moez-006-3.html" target="_blank">./html/moez-006-3.html</a>
+              </td>
+              <td>2023.05.17</td>
+              <td class="red"></td>
+            </tr>
+            <tr class="ed">
+              <td>moez-006-3</td>
+              <td>관리자</td>
+              <td>표인트 사용현황</td>
+              <td>상세페이지</td>
+              <td class="url">
+                <a href="./html/moez-006-4.html" target="_blank">./html/moez-006-4.html</a>
+              </td>
+              <td>2023.05.17</td>
+              <td class="red"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //관리자-->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>
