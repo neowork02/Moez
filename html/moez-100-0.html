@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Mo-EZ" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>Mo-EZ</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>input 모음</h1>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+                <!-- formWrap -->
+                <div class="formWrap">
+                    <div class="formHolder">
+                        <strong class="tit">select</strong>
+                        <select class="select" title="구분">
+                            <option value="">선택</option>
+                        </select>
+                    </div>
+                    <div class="formHolder">
+                        <strong class="tit">input</strong>
+                        <div class="inputList">
+                            <input type="text" title="타이틀 입력" placeholder="가나다라마바사" />
+                        </div>
+                    </div>
+                    <div class="formHolder">
+                        <strong class="tit">textarea</strong>
+                        <!--  textarea -->
+                        <div class="areaList">
+                            <textarea class="" rows="5" id="" placeholder="내용을 입력하세요" title="내용을 입력해주세요." ></textarea>
+                        </div>
+                        <!--  //textarea -->
+                    </div>
+                   
+                    <!-- radioList -->
+                    <div class="formHolder">
+                        <strong class="tit">radio title</strong>
+                        <div class="radioList">
+                            <input type="radio" id="rdo11" name="aa" checked="checked" />
+                            <label for="rdo11">전체</label>
+                        </div>
+                        <div class="radioList">
+                            <input type="radio" id="rdo12" name="aa" />
+                            <label for="rdo12">radio</label>
+                        </div>
+                        <div class="radioList">
+                            <input type="radio" id="rdo13" name="aa" readonly="readonly" />
+                            <label for="rdo13">radio(readonly)</label>
+                        </div>
+                    </div>
+                    <!--// radioList -->
+                    
+                    <!-- checkList -->
+                    <div class="formHolder">
+                        <strong class="tit">checkbox title</strong>
+                        <div class="checkList">
+                            <input type="checkbox" id="chk21" name="cc" checked="checked" />
+                            <label for="chk21">전체</label>
+                        </div>
+                        <div class="checkList">
+                            <input type="checkbox" id="chk22" name="cc" />
+                            <label for="chk22">checkbox</label>
+                        </div>
+                        <div class="checkList">
+                            <input type="checkbox" id="chk23" name="cc" readonly="readonly" />
+                            <label for="chk23">checkbo(readonly)</label>
+                        </div>
+                    </div>
+                    <!-- // checkList -->
+                </div>
+                <!-- //formWrap -->
+                <!-- formWrap -->
+                <div class="formHolder">
+                    <strong class="tit">button</strong>
+                    <!--  button -->
+                    <div class="btnWrap half">
+                        <button type="button" class="btn btnCancel">제출</button>
+                        <button type="button" class="btn btnDefault">제출</button>
+                    </div>
+                    <!--  // button -->
+                    <!--  button_full -->
+                    <div class="btnWrap">
+                        <button type="button" class="btn full">제출</button>
+                    </div>
+                    <!--  // button_full -->
+                </div>
+                <!-- //formWrap -->
+			</div>
+			<!-- //container -->
+		</div>
+	</body>
+</html>

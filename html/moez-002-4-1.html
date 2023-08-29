@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Mo-EZ" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>Mo-EZ</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>회원가입</h1>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+				<!-- JoinWrap:회원가입  -->
+				<div class="JoinWrap">
+					<!-- step  -->
+					<div class="stepArea">
+						<ul>
+							<li class="on"><em>1</em></li>
+							<li class="on"><em>2</em></li>
+							<li><em>3</em></li>
+						</ul>
+					</div>
+					<!-- //step -->
+                    <!-- text -->
+					<div class="textWrap">
+						<p class="title">정보입력</p>
+					</div>
+					<!-- //text -->
+                    <!-- formWrap -->
+                    <div class="formWrap">
+                        <div class="formHolder">
+                            <strong class="tit">닉네임/이름<span class="required">*</span></strong>
+                            <div class="inputList add">
+                                <input type="text" title="닉네임/이름 입력" placeholder="닉네임/이름 입력" />
+                                <button type="button" class="btn btnSecond">중복확인</button>
+                            </div>
+                            <!-- <p class="msgHelp">사용 가능한 닉네임/이름입니다.</p> -->
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">아이디<span class="required">*</span></strong>
+                            <div class="inputList add">
+                                <input type="text" title="아이디 입력" placeholder="아이디 입력" />
+                                <button type="button" class="btn btnSecond">중복확인</button>
+                            </div>
+                            <!-- <p class="msgHelp">사용 가능한 아이디입니다.</p> -->
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">비밀번호<span class="required">*</span></strong>
+                            <div class="inputList vertical">
+                                <input type="text" title="비밀번호 입력" placeholder="비밀번호 입력" />
+                                <input type="text" title="비밀번호 재입력" placeholder="비밀번호 재입력" />
+                            </div>
+                            <div class="msgTip">영문/숫자/특수문자 조합 8자리 이상 입력해주세요.</div>
+                            <!-- <div class="msgError">비밀번호가 일치하지 않습니다.</div> -->
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">이메일<span class="required">*</span></strong>
+                            <div class="inputList inputWrap">
+                                <input type="text" title="이메일 아이디" placeholder="abcde" style="width: 70%;" />
+                                <p>@</p>
+                                <select class="select" title="이메일 도메인">
+                                    <option value="">example.com</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">주소</strong>
+                            <div class="inputList add">
+                                <input type="text" title="주소입력" placeholder="주소입력" />
+                                <button type="button" class="btn btnSecond">주소찾기</button>
+                            </div>
+                            <div class="inputList">
+                                <input type="text" title="상세주소입력" placeholder="상세주소입력" />
+                            </div>
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">
+                                <div class="checkList">
+                                    <input type="checkbox" id="chk21" name="cc">
+                                    <label for="chk21">개인정보수집 약관 동의<span class="required">*</span></label>
+                                </div>
+                            </strong>
+                            <div class="inputList">
+                                <div class="termsArea">
+                                    <h1>개인정보의 수집 및 이용 목적</h1>
+                                    <p>이메일상담에 대한 신속하고 정확한 답변 및 처리를 위하여 개인정보 및 상담내용 등을 수집 및 이용, 저장처리 합니다. 이메일상담에 대한 신속하고 정확한 답변 이메일상담에 대한 신속하고 정확한 답변 및 처리를 위하여 개인정보 및 상담내용 등을 수집 및 이용, 저장처리 합니다. 이메일상담에 대한 신속하고 정확한 답변 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">SNS 수신동의</strong>
+                            <div class="checkList">
+                                <input type="checkbox" id="chk11" name="">
+                                <label for="chk11">동의</label>
+                            </div>
+                            <div class="checkList">
+                                <input type="checkbox" id="chk12" name="">
+                                <label for="chk12">미동의</label>
+                            </div>
+                        </div>
+                        <div class="formHolder">
+                            <strong class="tit">이메일 수신 동의</strong></div>
+                            <div class="checkList">
+                                <input type="checkbox" id="chk21" name="">
+                                <label for="chk21">동의</label>
+                            </div>
+                            <div class="checkList">
+                                <input type="checkbox" id="chk22" name="">
+                                <label for="chk22">미동의</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //formWrap -->
+					<!--  button -->
+					<div class="btnWrap full">
+						<button type="button" class="btn btnDisable">회원가입 하기</button>
+					</div>
+					<!--  //button -->
+				</div>
+				<!-- //JoinWrap:회원가입 -->
+			</div>
+			<!-- //container -->
+		</div>
+	</body>
+</html>

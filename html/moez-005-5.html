@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Mo-EZ" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>Mo-EZ</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>개인정보 수정</h1>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+				<!-- formWrap -->
+                <div class="formWrap">
+                    <div class="formHolder">
+                        <strong class="tit">현재 비밀번호</strong>
+                        <div class="inputList">
+                            <input type="text" title="현재 비밀번호 입력" placeholder="현재 비밀번호 입력" />
+                        </div>
+                    </div>
+                    <div class="formHolder">
+						<strong class="tit">새 비밀번호</strong>
+						<div class="inputList vertical">
+							<input type="text" title="새 비밀번호 입력" placeholder="새 비밀번호 입력" />
+							<input type="text" title="새 비밀번호 재입력" placeholder="새 비밀번호 재입력" />
+						</div>
+						<div class="msgTip">영문/숫자/특수문자 조합 8자리 이상 입력해주세요.</div>
+						<!-- <div class="msgError">비밀번호가 일치하지 않습니다.</div> -->
+					</div>
+					<div class="formHolder">
+						<strong class="tit">주소</strong>
+						<div class="inputList add">
+							<input type="text" title="주소입력" placeholder="주소입력" />
+							<button type="button" class="btn btnSecond">주소찾기</button>
+						</div>
+						<div class="inputList">
+							<input type="text" title="상세주소입력" placeholder="상세주소입력" />
+						</div>
+					</div>
+				</div>
+				<!-- //formWrap -->
+				<!--  button -->
+				<div class="btnWrap half">
+					<button type="button" class="btn sm btnCancel">취소</button>
+					<button type="button" class="btn sm btnDefault">변경</button>
+				</div>
+				<!--  // button -->
+			</div>
+			<!-- //container -->
+		</div>
+	</body>
+</html>

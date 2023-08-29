@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Mo-EZ" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>Mo-EZ</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>로그인</h1>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+				<!-- loginWrap:로그인영역  -->
+				<div class="loginWrap">
+					<!-- logo  -->
+					<div class="logoArea">
+						<h1 class="logo">Mo-EZ logo</h1>
+					</div>
+					<!-- //logo -->
+
+					<!--  loginForm -->
+					<div class="loginForm">
+						<div class="errorMsg">
+							<p>비밀번호를 잘못 입력하셨습니다.</p>
+						</div>
+						<div class="inptWrap id error">
+							<input type="text" title="아이디 입력" class="inptText" placeholder="아이디를 입력해주세요.">    
+						</div>
+						<div class="inptWrap pw active">
+							<input type="password" title="비밀번호 입력" class="inptText" placeholder="비밀번호를 입력해주세요.">    
+						</div>
+						<!-- 아이디 저장 -->
+						<div class="checkList">
+							<input type="checkbox" id="chk21" name="cc">
+							<label for="chk21">아이디 저장</label>
+						</div>
+						<!-- //아이디 저장 -->
+					</div>
+					<!-- // loginForm -->
+					
+					<!--  button -->
+					<div class="btnWrap full">
+						<button type="button" class="btn btnDisable">로그인 하기</button>
+						<!-- <button type="button" class="btn btnDefault">로그인 하기</button> -->
+						<button type="button" class="btn btnSecond">회원가입 하기</button>
+					</div>
+					<!--  //button -->
+					<!--  find txt -->
+					<div class="infoTxt">
+						<ul>
+							<li>아이디를 잊으셨나요? <a href="#">아이디 찾기</a></li>
+							<li>비밀번호를 잊으셨나요? <a href="#">비밀번호 찾기</a></li>
+						</ul>
+					</div>
+					<!-- // find txt -->
+				</div>
+				<!-- //loginWrap:로그인영역 -->
+			</div>
+			<!-- //container -->
+		</div>
+	</body>
+</html>

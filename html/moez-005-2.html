@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="Mo-EZ" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="#" />
+		<title>Mo-EZ</title>
+		<link type="text/css" rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- header -->
+			<div class="header">
+				<a href="#" class="btnBack" role="button"><span>Back</span></a>
+				<h1>마이페이지</h1>
+			</div>
+			<!-- //header -->
+			<!-- container -->
+			<div class="container">
+				<!-- myWrap -->
+				<div class="myWrap">
+					<!-- 임시 팝업 호출 버튼 -->
+					<div class="btnWrap full">
+						<div class="btn btnSecond" onclick="popCenter();return false;">팝업</div>
+					</div>
+					<!-- //임시 팝업 호출 버튼 -->
+				</div>
+				<!-- //myWrap -->
+				<!-- popWrap -->
+				<div class="popWrap centerLayer">
+					<div class="dim"></div>
+					<div class="dimCloseArea" onclick="popClose(this);return false;">
+						터치 시 해당 창을 닫습니다.
+					</div>
+					<!-- 닫기용 투명 dim 추가 -->
+
+					<!-- popInner -->
+					<div class="popInner">
+						<!-- popHeader -->
+						<div class="popHeader">
+							<a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다." ></a>
+						</div>
+						<!-- //popHeader -->
+						<!-- popCont -->
+						<div class="popCont">
+							<!-- confirmMsg -->
+							<div class="confirmMsg">
+								<div class="title">비밀번호를 입력해주세요.</div>
+								<div class="formHolder">
+									<div class="inputList">
+										<input type="text" class="error" title="비밀번호 입력" placeholder="비밀번호 입력" />
+									</div>
+									<div class="msgError">비밀번호가 일치하지 않습니다.</div>
+								</div>
+							</div>
+							<!-- //confirmMsg -->
+							<!-- btnWrap -->
+							<div class="btnWrap half">
+								<button type="button" class="btn btnCancel" onclick="popClose(this);return false;">취소</button>
+								<button type="button" class="btn btnDefault">확인</button>
+							</div>
+							<!-- //btnWrap -->
+						</div>
+						<!-- //popCont -->
+
+					</div>
+					<!-- //popInner -->
+				</div>
+				<!-- //popWrap -->
+			</div>
+			<!-- //container -->
+			<!-- footer -->
+			<div class="footer">
+				<ul class="footerNav">
+					<li><a href="javascript:;" class="item01"><i></i>홈</a></li>
+					<li><a href="javascript:;" class="item02"><i></i>문의</a></li>
+					<li><a href="javascript:;" class="item03 on"><i></i>마이페이지</a></li>
+				</ul>
+			</div>
+			<!-- //footer -->
+		</div>
+	</body>
+</html>

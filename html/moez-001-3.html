@@ -1,0 +1,163 @@
+<html lang="ko"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Mo-EZ">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="#">
+    <title>Mo-EZ</title>
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+	 <script type="text/javascript" src="../js/common.js"></script> 
+</head>
+<body style="overflow: hidden; position: fixed; width: 100%;">
+    <!-- wrapper -->
+    <div class="wrapper"><div class="header">
+    <a href="/" class="btnBack" role="button"><span>Back</span></a>
+    <h1>로그인</h1>
+</div>
+<div class="container">
+    <div class="loginWrap">
+        <div class="logoArea">
+            <h1 class="logo">Mo-EZ logo</h1>
+        </div>
+        <div id="loginform" class="loginForm" mothod="post">
+            <!-- <div class="errorMsg">
+                <p>비밀번호를 잘못 입력하셨습니다.</p>
+            </div> -->
+            <input type="hidden" name="aeskey" id="aeskey" value="">
+            <div class="inptWrap id active">
+                <input type="text" id="uid" name="uid" class="inptText" placeholder="아이디를 입력해주세요.">
+            </div>
+            <div id="errorMsgID" class="errorMsg" style="display: none;"></div>
+            <div class="inptWrap pw active">
+                <input type="password" id="upwd" name="upwd" class="inptText" placeholder="비밀번호를 입력해주세요." onkeypress="if(event.keyCode==13) procLogin();">
+            </div>
+            <div id="errorMsgPWD" class="errorMsg" style="display: none;"></div>
+            <div class="checkList">
+                <input type="checkbox" style="cursor: pointer;" id="id_save" name="id_save">
+                <label for="id_save" style="cursor: pointer;">아이디 저장</label>
+            </div>
+        </div>
+        <div class="btnWrap full">
+            <button type="button" id="btnGoLogin" class="btn btnDefault" onclick="procLogin();">로그인 하기</button>
+            <!-- <button type="button" class="btn btnDefault">로그인 하기</button> -->
+            <button type="button" id="btnJoin" class="btn btnSecond" data-page="ZVNSRW1hOGNkc2pHNHJTRTc0VlVoQT09">회원가입 하기</button>
+        </div>
+        <div class="infoTxt">
+            <ul>
+            <li>아이디를 잊으셨나요? <a id="findID" onclick="popFindID();">아이디 찾기</a></li>
+            <li>비밀번호를 잊으셨나요? <a id="findPW" onclick="popFindPWD();">비밀번호 찾기</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- popWrap:아이디 찾기 팝업 -->
+    <div id="popFindID" class="popWrap fullLayerPop">
+        <div class="popInner h1" style="bottom: 422px; left: 195px;">
+            <h1>아이디 찾기</h1>
+            <div class="popCont" style="height: 796px;">
+                <div class="formWrap">
+                    <div class="formHolder">
+                        <strong class="tit">닉네임/이름</strong>
+                        <div class="inputList">
+                            <input type="text" id="findID_Name" title="이름 입력" placeholder="이름 입력">
+                        </div>
+                        <p id="msgFindIDUname" class="msgError" style="display: none;"></p>
+                    </div>
+                    <div class="formHolder">
+                        <strong class="tit">휴대폰 번호</strong>
+                        <div class="inputList">
+                            <input type="text" id="findID_HP" title="휴대폰 번호 입력" placeholder="- 없이 입력">
+                        </div>
+                        <p id="msgFindIDHP" class="msgError" style="display: none;"></p>
+                    </div>
+                </div>
+                <div class="btnWrap half">
+                    <button type="button" class="btn btnCancel" onclick="popClose(this);return false;">취소</button>
+                    <button id="btnFindID" type="button" class="btn btnDefault">아이디 찾기</button>
+                </div>
+            </div>
+            <div class="popBtnWrap">
+                <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다.">
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- popWrap:비밀번호 찾기 팝업 -->
+    <div id="popFindPWD" class="popWrap fullLayerPop" style="display: block;">
+        <div class="popInner h1">
+            <h1>비밀번호 찾기</h1>
+            <div class="popCont" style="height: 796px;">
+                <div class="formWrap">
+                    <div class="formHolder">
+                        <strong class="tit">닉네임/이름</strong>
+                        <div class="inputList">
+                            <input type="text" id="findPWD_Name" title="이름 입력" placeholder="이름 입력">
+                        </div>
+                    </div>
+                    <div class="formHolder">
+                        <strong class="tit">아이디</strong>
+                        <div class="inputList">
+                            <input type="text" id="findPWD_ID" title="아이디 입력" placeholder="아이디를 입력해주세요">
+                        </div>
+                    </div>
+                </div>
+                          <div class="formHolder">
+									<strong class="tit">이메일</strong>
+									<div class="inputList inputWrap">
+										<input type="text" title="이메일 아이디" placeholder="abcde" style="width: 70%;">
+										<p>@</p>
+										<select class="select" title="이메일 도메인">
+											<option value="">example.com</option>
+										</select>
+									</div>
+				    			</div>
+                <div class="btnWrap half">
+                    <button type="button" class="btn btnCancel" onclick="popClose(this);return false;">취소</button>
+                    <button type="button" id="btnFindPWD" class="btn btnDefault">비밀번호 찾기</button>
+                </div>
+            </div>
+            <div class="popBtnWrap">
+                <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다.">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../modules/CryptoJS-3.1.2/aes.js"></script>
+<script src="../js/login.js"></script>
+
+        <div class="popWrap centerLayer" style="display: block;">
+            <div class="dim"></div>
+            <div class="dimCloseArea" onclick="popClose(this);return false;">
+                터치 시 해당 창을 닫습니다.
+            </div>
+            <!-- 닫기용 투명 dim 추가 -->
+
+            <div class="popInner2" >
+                <div class="popHeader">
+                    <a href="javascript:;" onclick="popClose(this);return false;" class="popClose" title="해당 창을 닫습니다."></a>
+                </div>
+                <div class="popCont" style="">
+                    <div class="confirmMsg">
+                        <div id="pop_title" class="title">[모이지 v0.1]
+
+비밀번호 찾기</div>
+                        <div class="disc">
+                            <p id="pop_msg">닉네임/이름 : 한글,영문,숫자(한글기준 10자 이하, 영문기준 4자이상) 특수문자,공백 사용불가</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="btnWrap half">
+                        <button type="button" class="btn btnDefault" onclick="popClose(this);return false;">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+</body></html>
